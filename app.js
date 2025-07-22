@@ -3,23 +3,17 @@ const fs = require('fs');
 
 const app = express();
 
-// app.get('/', (request, response) => {
+app.get('/', (request, response) => {
 
-//     fs.readFile('./home.html', 'utf8', (err, html) => {
+    fs.readFile('./home.html', 'utf8', (err, html) => {
 
-//         if (err) {
-//             response.status(500).send('sorry, out of order');
-//         }
+        if (err) {
+            response.status(500).send('sorry, out of order');
+        }
 
-//         response.send(html);
+        response.send(html);
 
-//     });
-
-// });
-
-app.get('/', async (request, response) => {
-
-    response.send( await fs.readFile('./home.html', 'utf8'));
+    });
 
 });
 
