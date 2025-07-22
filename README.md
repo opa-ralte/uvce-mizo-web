@@ -1,6 +1,6 @@
 # uvce-mizo-web
 
-[git&github setup](https://www.theodinproject.com/lessons/foundations-setting-up-git) Hemi link aṭang hian linux hmang tan git leh github setup dan a awm a, windows hmang tan chuan git bash download a ngai anga. hemi [link](https://git-scm.com/downloads/win) atang hian a download theih e. Windows tan bik chuan khimi setup khi a tawk ang.
+[git&github setup](https://www.theodinproject.com/lessons/foundations-setting-up-git) Hemi link aṭang hian linux hmang tan git leh github setup dan a awm a, windows hmang tan chuan git bash download a ngai anga. hemi [link](https://git-scm.com/downloads/win) atang hian a download theih e. Windows tan pawh khimi setup khi a tawk ang.
 
 *git leh github hmanga kan thawh ho dan tur tlangpui*
 
@@ -12,6 +12,7 @@
 
 ## *git commands kan hman hian working repository ah kan awm a ngai (chu chu repo kan clone kha a ni)*
 - A tlangpuiin [git commands](https://education.github.com/git-cheat-sheet-education.pdf) kan hman tur ho chu
+
     `git status` hei hian info a rawn chhawp chhuak anga, kan remote-repo a file kan track leh track loh te a rawn tarlang a (hemi command hi chu hman deuh char char a pawi lo)
 
     `git add -A` hei hi chuan kan remote-repo a kan file zawng zawng track turin a siam a. (kan project size avangin a hnuaia👇 command zawk hman hi habit ah nei thei ila a tha awm e)
@@ -32,13 +33,13 @@
 
     Kan workflow atan hian **branching** kan hmang anga. Kan hna insem azir zelin branch thar kan siam anga.
 
-    Entir nan contacts page ka lo khawih dawn chuan `git checkout -b contacts` te ka ti thei a, branch thar ka siam "contacts" ah chuan code ka va thlak danglam anga.*Basic git workflow* (`git pull`, `git add`, `git commit`, `git push`) kha ka apply anga. Chuan ka zawh fel hnuah [**pull request**](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request#creating-the-pull-request) ka siam ang.
+    Entir nan contacts page ka lo khawih dawn chuan `git checkout -b contacts` te ka ti thei a, branch thar ka siam "contacts" ah chuan code ka va thlak danglam anga. *Basic git workflow* (`git pull`, `git add`, `git commit`, `git push`) kha ka apply anga. Chuan ka zawh fel hnuah [**pull request**](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request#creating-the-pull-request) ka siam ang.
 
     [**pull request**](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request#creating-the-pull-request) siam dan tlangpui chu, khimi example👆 tho khi hmang ila, ka branch siam contacts kha ka push fel hnuah [github](github.com)-a kan repo ah ka va lut anga. Ka branch siam thar contacts tih kha a lo awm anga. Compare and [**pull request**](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request#creating-the-pull-request) tih emaw kha a lo awm anga. Chuan pull request siamna page a rawn inhawng anga, kan thil thlak danglam tak a kha kan va sawifiah thei a.
 
     Tuna kan repo settings-ah hian pull request merge dawn hian mi pahnihin an review phawt a ngai a ni.
 
-    Hemi [video](https://www.youtube.com/watch?v=jhtbhSpV5YA) hi lo en chhin ila, github workflow tlangpui hriat zual nan. Tah hian a youtuber pa hian **master** a tih khan **main** tih nen a in ang reng e.
+    Hemi [video](https://www.youtube.com/watch?v=jhtbhSpV5YA) hi lo en chhin ila, github workflow tlangpui hriat zual nan. Tah hian a youtuber pa hian **master** a tih hian **main** tih nen a in ang reng e.
 
 
     *siam that ngai a awm chuan pls in contact me*
