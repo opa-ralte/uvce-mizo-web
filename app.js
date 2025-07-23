@@ -16,7 +16,6 @@ const fs = require('fs');
 const app = express();
 
 app.set('view engine', 'ejs'); // We can embed js directly within our html file
-app.set('layout', 'layouts/layout'); // This is the common skeleton of our webpage
 app.use(express.urlencoded({urlencoded:true}));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
@@ -25,7 +24,7 @@ app.use('/image', express.static(path.join(__dirname, 'image')));
 
 app.get('/home', async (req, res) => {
     try {
-        req.render('index', { title: 'Home Page'});
+        res.render('index', { title: 'Home'});
     } catch (error) {
         res.status(500).send('Something went wrong loading home page.');
     }
