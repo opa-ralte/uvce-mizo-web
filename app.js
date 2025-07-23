@@ -15,12 +15,15 @@ const fs = require('fs');
 // This initializes an express application instance
 const app = express();
 
+
 app.set('view engine', 'ejs'); // We can embed js directly within our html file
 app.use(express.urlencoded({urlencoded:true}));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/image', express.static(path.join(__dirname, 'image')));
+
+
 
 app.get('/home', async (req, res) => {
     try {
@@ -30,6 +33,9 @@ app.get('/home', async (req, res) => {
     }
 });
 
-// Start the server
+
+
+
+// Start the server 🌐server start karo🌐
 app.listen(process.env.PORT || 3000, () => console.log(`App available on http://localhost:3000/home`));
 
