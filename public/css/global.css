@@ -69,12 +69,6 @@ header {
   display: block;
 }
 
-main {
-    flex: 1; /*This will make sure that main takes up majority of the space available*/
-    display: flex;
-    min-height: 100dvh;
-}
-
 footer {
     margin: 10;
     flex-shrink: 0;

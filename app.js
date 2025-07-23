@@ -29,7 +29,47 @@ app.get('/home', async (req, res) => {
     try {
         res.render('index', { title: 'Home'});
     } catch (error) {
-        res.status(500).send('Something went wrong loading home page.');
+        res.status(500).send(`Something went wrong loading ${title}`);
+    }
+});
+
+app.get('/about', async (req, res) => {
+    try {
+        res.render('about', { title: 'About'});
+    } catch (error) {
+        res.status(500).send(`Something went wrong loading ${title}`);
+    } 
+});
+
+app.get('/alumni', async (req, res) => {
+    try {
+        res.render('alumni', { title: 'Alumni'});
+    } catch (error) {
+        res.status(500).send(`Something went wrong loading ${title}`);
+    }
+});
+
+app.get('/civil', async (req, res) => {
+    try {
+        res.render('civil', { title: 'Civil'});
+    } catch (error) {
+        res.status(500).send(`Something went wrong loading ${title}`);
+    }
+});
+
+app.get('/mech', async (req, res) => {
+    try {
+        res.render('mech', { title: 'Mech'});
+    } catch (error) {
+        res.status(500).send(`Something went wrong loading ${title}`);
+    }
+});
+
+app.get('/cse', async (req, res) => {
+    try {
+        res.render('cse', { title: 'CSE'});
+    } catch (error) {
+        res.status(500).send(`Something went wrong loading ${title}`);
     }
 });
 
