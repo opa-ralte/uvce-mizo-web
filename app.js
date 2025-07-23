@@ -27,7 +27,7 @@ app.use('/image', express.static(path.join(__dirname, 'image')));
 
 app.get('/home', async (req, res) => {
     try {
-        res.render('index', { title: 'Home'});
+        res.render('home', { title: 'Home'});
     } catch (error) {
         res.status(500).send(`Something went wrong loading ${title}`);
     }
