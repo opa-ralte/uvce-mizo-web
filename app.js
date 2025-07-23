@@ -73,6 +73,30 @@ app.get('/cse', async (req, res) => {
     }
 });
 
+app.get('/contacts', async (req, res) => {
+    try {
+        res.render('contacts', { title: 'Contacts'});
+    } catch (error) {
+        res.status(500).send(`Something went wrong loading ${title}`);
+    }
+});
+
+app.get('/extras', async (req, res) => {
+    try {
+        res.render('extras', { title: 'Extras'});
+    } catch (error) {
+        res.status(500).send(`Something went wrong loading ${title}`);
+    }
+});
+
+app.get('/danger', async (req, res) => {
+    try {
+        res.render('danger', { title: 'Danger'});
+    } catch (error) {
+        res.status(500).send(`Something went wrong loading ${title}`);
+    }
+});
+
 
 
 
