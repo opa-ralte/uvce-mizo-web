@@ -16,7 +16,6 @@ a:hover {
 
 header {
     margin: 0;
-    border: 2px solid saddlebrown;
     display:flex;
     padding: 30px;
     justify-content: space-between;
@@ -24,8 +23,9 @@ header {
 }
 
 .logo {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid pink;
 }
 
 .links {
@@ -76,7 +76,6 @@ footer {
     display: flex;
     justify-content: space-evenly;
     text-align: center;
-    border: 2px groove #748B98;
 }
 
 
