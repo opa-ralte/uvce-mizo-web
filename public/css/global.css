@@ -81,4 +81,9 @@ footer {
     flex-wrap: wrap;
 }
 
+.insta-footer {
+  max-width: 15px;
+  max-height: 15px;
+}
+
 
