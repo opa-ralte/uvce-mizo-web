@@ -39,6 +39,8 @@
             height: auto;
             flex-grow: 1;
         }
+    
+    }
 
         .content {
             margin: 5px;
