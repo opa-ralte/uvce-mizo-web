@@ -39,9 +39,11 @@ header {
     gap: 25px;
     margin-top: 20px;
     color: white;
+    font-weight:bold;
 }
 .haal {
   color: white;
+  font-weight: bold;
 }
 
 .dropdown {
@@ -55,8 +57,9 @@ header {
   outline: none;
   color: inherit;
   background-color: inherit;
-  font-family: inherit;
+  font-family: monospace, 'Courier New', Courier;
   margin: 0;
+  font-weight: 550;
 }
 
 .dropdown-content {
