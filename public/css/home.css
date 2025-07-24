@@ -1,0 +1,102 @@
+.wrapper-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+    .main-title {
+        font-family: monospace, 'Courier New', Courier;
+        font-weight: bolder;
+        font-size: xx-large;
+        background-color: pink;
+        border-radius: 30px;
+        padding: 10px;
+        flex-shrink: 0;
+    }
+
+/* 👆anything above this remains same whatsoever 👆 */
+
+
+/* for small smartphones */
+@media (min-width:320px) {
+    .wrapper-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+    }
+    .photos {
+            margin: 5px;
+            border: 2px solid black;
+            border-radius: 30px;
+            padding: 5px;
+            flex-wrap: wrap;
+            max-width: 90%;
+            width: 95%;
+            height: auto;
+            flex-grow: 1;
+        }
+
+        .content {
+            margin: 5px;
+            padding-left: 5px;
+            padding-right: 5px;
+            flex-wrap: wrap;
+        }
+}
+
+/* for larger phones */
+@media (min-width:480px) {
+
+}
+
+/* for portrait tablets */
+@media (min-width:600px) {
+
+}
+
+/* for landscape tablets and lower-resolution laptops.  */
+@media (min-width:801px) {
+
+}
+
+/* for larger tablets and desktops.  */
+@media (min-width:1025px) {
+    .wrapper-2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+        .photos {
+            margin: 5px;
+            border: 2px solid black;
+            border-radius: 30px;
+            padding: 5px;
+            flex-wrap: wrap;
+            max-width: 50%;
+            width: 100%;
+            height: auto;
+            flex-grow: 1;
+        }
+
+        .content {
+            margin: 5px;
+            padding-left: 5px;
+            padding-right: 5px;
+            flex-wrap: wrap;
+        }
+}
+
+
+
+
+
+
+        
+
+
+
