@@ -12,6 +12,7 @@
         background-color: pink;
         border-radius: 30px;
         padding: 10px;
+        margin-bottom: 50px;
         flex-shrink: 0;
     }
 
