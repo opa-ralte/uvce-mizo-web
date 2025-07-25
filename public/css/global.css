@@ -99,6 +99,16 @@ footer {
     justify-content: space-evenly;
     text-align: center;
     flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.copyright {
+  font-size: 0.8em;
 }
 
 .insta-footer {
