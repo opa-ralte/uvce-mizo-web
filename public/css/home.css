@@ -63,7 +63,7 @@
     position: sticky; /* Keep it in place while scrolling through it */
     top: 0; /* Stick to the top of the viewport */
     opacity: 1; /* Initial opacity */
-    transition: opacity 0.8s ease-out; /* Smooth transition for opacity changes */
+    transition: opacity 0.4s ease-out; /* Smooth transition for opacity changes */
     z-index: -1; /* Ensure it stays behind other content */
     flex-wrap: wrap;
     }
@@ -73,6 +73,24 @@
     font-size: 3em;
     flex-wrap: wrap;
     text-align: center;
+    }
+
+    .stats {
+    display: flex;
+    gap: 7em;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    }
+
+    .zat {
+        margin: 1em;
+        border-radius: 1em;
+        padding: 2em;
+        background-color: #dbeeee;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
 }
@@ -99,7 +117,7 @@
         position: sticky; /* Keep it in place while scrolling through it */
         top: 0; /* Stick to the top of the viewport */
         opacity: 1; /* Initial opacity */
-        transition: opacity 0.8s ease-out; /* Smooth transition for opacity changes */
+        transition: opacity 0.6s ease-out; /* Smooth transition for opacity changes */
         z-index: -1; /* Ensure it stays behind other content */
         flex-wrap: wrap;
     }
