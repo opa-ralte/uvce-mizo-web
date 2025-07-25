@@ -97,14 +97,6 @@ app.get('/extras', async (req, res) => {
     }
 });
 
-app.get('/danger', async (req, res) => {
-    try {
-        res.render('danger', { title: 'Danger'});
-    } catch (error) {
-        res.status(500).send(`Something went wrong loading ${title}`);
-    }
-});
-
 
 
 
