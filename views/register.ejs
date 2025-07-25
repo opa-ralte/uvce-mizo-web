@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <style>
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: #f7f8fa;
+    min-height: 100vh;
+  }
+  h1 {
+    color: #2d2d2d;
+    margin-top: 40px,auto;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .container {
+    max-width: 480px;
+    margin: 100px 200px 0 auto; /* Top, Right, Bottom, Left */
+    padding: 32px 28px 24px 28px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px rgba(44, 62, 80, 0.10), 0 1.5px 4px rgba(44,62,80,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .container1 {
+    width: 66.66%;
+    max-width: none;
+    min-height: 90vh;
+    margin: 0px 0 0 auto; /* Top, Right, Bottom, Left */
+    padding: 32px 28px 24px 28px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px rgba(44, 62, 80, 0.10), 0 1.5px 4px rgba(44,62,80,0.06);
+    gap: 18px;
+    ;
+  }
+  label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 6px;
+    display: block;
+    font-size: 1rem;
+  }
+  .form-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 0;
+  }
+  @media (max-width: 600px) {
+    .form-row {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+  .branch-input, .form-year, select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f9f9fb;
+    transition: border-color 0.2s;
+  }
+  .branch-input:focus, .form-year:focus, input:focus, textarea:focus, select:focus {
+    border-color: #7c3aed;
+    outline: none;
+    background: #fff;
+  }
+  input[type="text"], input[type="tel"] {
+    width: 95%;
+    padding: 10px 12px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f9f9fb;
+    transition: border-color 0.2s;
+    margin-bottom: 0;
+  }
+  .ph_input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f9f9fb;
+    transition: border-color 0.2s;
+  }
+  .form-textarea-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .form-textarea {
+    width: 95%;
+    padding: 10px 12px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f9f9fb;
+    resize: none;
+    min-height: 70px;
+    transition: border-color 0.2s;
+  }
+  button[type="submit"] {
+    background: linear-gradient(90deg, #7c3aed 0%, #4f46e5 100%);
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(124,58,237,0.08);
+    transition: background 0.2s, box-shadow 0.2s;
+    margin-top: 8px;
+  }
+  button[type="submit"]:hover {
+    background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 100%);
+    box-shadow: 0 4px 16px rgba(124,58,237,0.12);
+  }
+  a {
+    color: #7c3aed;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  a:hover {
+    color: #4f46e5;
+    text-decoration: underline;
+  }
+  .container > div, .container > .form-textarea-group {
+    margin-bottom: 12px;
+  }
+</style>
+</head>
+<body>
+<%- include('partials/_topbar') %>
+
+<div class="container1">
+  <h1>Register Form</h1>
+  <form action="/register-post" method="POST">
+    <div class="container">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required class="name_input">
+      </div>
+      <div class="form-row">
+        <div style="flex:1;">
+          <label for="branch">Branch:</label>
+          <select name="branch" id="branch" class="branch-input" required>
+            <option value="" disabled selected>Select Branch</option>
+            <option value="CSE">CSE</option>
+            <option value="Mech">MECH</option>
+            <option value="Civil">CIVIL</option>
+          </select>
+        </div>
+        <div style="flex:1;">
+          <label for="year">Year:</label>
+          <select name="year" id="year" class="form-year" required>
+            <option value="" disabled selected>Select Year</option>
+            <option value="1">1st Year</option>
+            <option value="2">2nd Year</option>
+            <option value="3">3rd Year</option>
+            <option value="4">4th Year</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label for="phone">Contact:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required class="ph_input">
+      </div>
+      <div class="form-textarea-group">
+        <label for="address">Address:</label>
+        <textarea name="address" id="address" rows="4" required class="form-textarea"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </div>
+  </div>
+  </form>
+</br>
+</body>
+</html>
