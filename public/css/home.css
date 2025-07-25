@@ -1,12 +1,109 @@
+.content-below {
+    height: 200vh; /* Make this section tall enough to scroll over the hero */
+    background-color: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(227, 239, 239, 0.2)); /* The color you want after the fade */
+    position: relative;
+    z-index: 1; /* Ensure this content appears above the hero-section */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.title {
+    margin-top: 2em;
+    font-size: 4em;
+    flex-wrap: wrap;
+}
+
+.subtitle {
+    font-style: oblique;
+}
+
+.stats {
+    display: flex;
+    gap: 7em;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.zat {
+    border-radius: 1em;
+    padding: 2em;
+    background-color: #dbeeee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .des {
+        font-weight: bolder;
+        font-family: monospace, 'Courier New', Courier;
+    }
+
+    .num {
+        padding: 1em;
+        border: 0.5em unset black;
+    }
+
+/*######👆👆👆👆####### common for all*/
+
+
 
 /* for small smartphones */
 @media (min-width:320px) {
-    
+
+    .hero-section {
+    background-image: url(/images/phone-home.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Make it full viewport height initially */
+    position: sticky; /* Keep it in place while scrolling through it */
+    top: 0; /* Stick to the top of the viewport */
+    opacity: 1; /* Initial opacity */
+    transition: opacity 0.8s ease-out; /* Smooth transition for opacity changes */
+    z-index: -1; /* Ensure it stays behind other content */
+    flex-wrap: wrap;
+    }
+
+    .title {
+    margin-top: 2em;
+    font-size: 3em;
+    flex-wrap: wrap;
+    text-align: center;
+    }
+
 }
 
-/* for larger tablets and hi res devices
+
+
+
+
+/* for larger tablets and hi res devices */
 @media (min-width:1025px) {
     
+    .home {
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .hero-section {
+        background-image: url(/images/utc-moment.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh; /* Make it full viewport height initially */
+        position: sticky; /* Keep it in place while scrolling through it */
+        top: 0; /* Stick to the top of the viewport */
+        opacity: 1; /* Initial opacity */
+        transition: opacity 0.8s ease-out; /* Smooth transition for opacity changes */
+        z-index: -1; /* Ensure it stays behind other content */
+        flex-wrap: wrap;
+    }
+
 }
 
 
