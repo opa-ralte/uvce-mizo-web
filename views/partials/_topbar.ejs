@@ -1,0 +1,92 @@
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .topbar {
+      background-color: #342c20;
+      padding: 14px 20px;
+      justify-content: end;
+      display: flex;
+      ;
+    }
+
+    .topbar a {
+      color: rgb(238, 235, 232);
+      padding: 14px 16px;
+      text-decoration: none;
+      text-align:center;
+      
+      
+    }
+
+    .topbar a:hover {
+      background-color: #0a2336c2;
+      border-radius: 30px;
+    }
+   .topbar Img {
+      width: 75px;
+      height:65px;
+      margin-top: -10px;
+     display: flex;
+     justify-content: flex-start;
+     margin-right:810px ;
+   
+    }
+    .dropdown {
+  position: relative;
+  text-align: center; 
+  margin-top: 14px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 12px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn {
+  color: white;
+}html {
+  overflow-y: scroll; /* Always reserve space for vertical scrollbar */
+}
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+  <div> <img src="/image/uvce logo.png" alt="topbar Image"></div>
+    <a href="/home">Home</a>
+         <div class="dropdown">
+    <a href="/department" class="dropbtn">Department</a>
+    <div class="dropdown-content">
+      <a href="/cse">CSE</a>
+    
+      <a href="/mech">Mechanical</a>
+      <a href="/civil">Civil</a>
+    </div>
+  </div>
+    <a href="/contact">Contact</a>
+    <a href="/alumni">Alumni</a> 
+    <a href="/register">Member</a>
+      <a href="/question">Question Bank</a>
+
+
+  </div>
+       
+
+</body>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime List</title>
+</head>
+<body>
+ <%- include('partials/_topbar') %>
+
+
+  <h1>Hei pawh list ani</h1>
+
+  <ul>
+    <% animeList.forEach(anime => { %>
+      <li>
+        <strong><%= anime.name %></strong> - Type: <%= anime.type %> 
+        Villian: <%= anime.villian || 'Unknown' %>
+
+        <form action="/delete-anime" method="POST" style="display:inline;">
+          <input type="hidden" name="id" value="<%= anime._id %>">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+</head>
+<body>
+<%- include('partials/_topbar') %>
+
+
+  <h1>Register Form</h1>
+  <form action="/register-post" method="POST">
+    <label>Name: <input type="text" name="name" required></label><br>
+   <label>Branch: 
+    <select name="branch" required>
+      <option value="">--Select Branch--</option>
+      <option value="Mechanical">Mechanical</option>
+      <option value="CSE">CSE</option>
+      <option value="Civil">Civil</option>
+    </select>
+  </label><br>
+    </select></label><br>
+      <label>Year: 
+    <select name="year" required>
+      <option value="">--Select Year--</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+  </label><br>
+      <label>Phone Number: 
+    <input type="text" name="phone_number" pattern="[0-9]{10}" maxlength="10" minlength="10" required>
+  </label><br>
+
+    <textarea name="address" required></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+  <table style="width: 100%; border-collapse: collapse;">
+  <thead>
+    <tr style="background-color: #ddd;">
+      <th>Name</th>
+      <th>Branch</th>
+      <th>Year</th>
+      <th>Phone Number</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% registerList.forEach((register, index) => { %>
+      <tr style="background-color:#f2f2f2; text-align: center;">
+        <td><%= register.name %></td>
+        <td><%= register.branch %></td>
+        <td><%= register.year %></td>
+        <td><%= register.phone_number %></td>
+        <td><%= register.address %></td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
+</body>
+</html>
