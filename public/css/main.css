@@ -1,5 +1,0 @@
-main {
-    flex: 1; /*This will make sure that main takes up majority of the space available*/
-    /* display: flex; */
-    min-height: 100dvh;
-}

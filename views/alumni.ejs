@@ -1,10 +1,27 @@
-<%- include('partials/header') %>
-<link rel="stylesheet" href="/css/alumni.css">
-    <main>
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/style.css"><!-- optional -->
+</head>
+<body>
+ <%- include('partials/_topbar') %>
 
+  <h1>ENG ATAN NGE CTEA LEAK EN I TUM</h1>
+  <form action="/anime-post" method="POST">
+    <label for="name">Anime Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
 
-        <h1>ALUMNI</h1>
+    <label for="type">Type (e.g., Shonen, Seinen):</label><br>
+    <input type="text" id="type" name="type" required><br><br>
 
-        
-    </main>
-<%- include('partials/footer') %>
+    <label for="protegonese">Protagonist:</label><br>
+    <input type="text" id="protegonese" name="protegonese"><br><br>
+
+    <label for="villian">Villain:</label><br>
+    <input type="text" id="villian" name="villian"><br><br>
+
+    <button type="submit">Submit Anime</button>
+  </form>
+</body>
+</html>
