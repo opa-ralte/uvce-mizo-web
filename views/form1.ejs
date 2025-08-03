@@ -1,43 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Register Form</title>
-    <link rel="stylesheet" href="/styles.css"> 
+<style>
+.student-card {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 16px;
+  background-color: #f3d3d3;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.student-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.info h3 {
+  margin: 0 0 8px 0;
+}
+
+.info p {
+  margin: 4px 0;
+  color: #333;
+}
+</style>
+
 </head>
 <body>
  <%- include('partials/_topbar') %>
 
-    <h1>Register Form</h1>
-    
-    <form action="/register" method="POST">
-        
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-        </div>
-
-       
-        <div>
-            <label for="brach">Branch:</label>
-            <input type="text" id="brach" name="brach" required>
-        </div>
-
-        <div>
-            <label for="year">Year:</label>
-            <input type="number" id="year" name="year" required>
-        </div>
-
-     
-        <div>
-            <label for="adress">Address:</label>
-            <textarea id="adress" name="adress" required></textarea>
-        </div>
-
-        
-        <div>
-            <button type="submit">Submit</button>
-        </div>
+   <div class="student-card">
+  <div class="card-content">
+    <img src="/image/masstera.jpg" alt="Student Photo" class="student-img">
+    <div class="info">
+      <h3><strong>Name:</strong> masstera</h3>
+      <p><strong>Branch:</strong> CSE</p>
+      <p><strong>Year:</strong> 4</p>
+      <p><strong>Phone:</strong> 9876543210</p>
+      <p><strong>Address:</strong> Aizawl, Mizoram</p>
+    </div>
+  </div>
+</div>
     </form>
 </body>
 </html>

@@ -4,7 +4,28 @@
 
 
         <h1>CSE</h1>
-
+<table style="width: 100%; border-collapse: collapse;">
+  <thead>
+    <tr style="background-color: #ddd;">
+      <th>Name</th>
+      <th>Branch</th>
+      <th>Year</th>
+      <th>Phone Number</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+ <% cseStudents.forEach(student => { %>
+   <tr style="background-color:#f2f2f2; text-align: center;">
+      <td><%= student.name %></td>
+      <td><%= student.branch %></td>
+      <td><%= student.year %></td>
+      <td><%= student.phone_number %></td>
+      <td><%= student.address %></td>
+    </tr>
+  <% }) %>
+  </tbody>
+</table>
         
     </main>
 <%- include('partials/footer') %>

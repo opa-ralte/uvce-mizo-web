@@ -6,6 +6,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const Anime = require('./models/anime'); // adjust the path as needed
 const Register = require('./models/register'); // adjust the path as needed
+const { constants } = require('buffer');
 const app=express();
 
 //A hnuaia mite hi database mongodb ami nena connect na ani
@@ -47,27 +48,37 @@ app.get('/department', async (req, res) => {
   }
 });
 app.get('/civil', async (req, res) => {
-    try {
-        res.render('civil', { title: 'Civil'});
-    } catch (error) {
-        res.status(500).send(`Something went wrong loading ${title}`);
-    }
+  try {
+    const civilStudents = await Register.find({ branch: 'Civil' });
+
+   
+    civilStudents.sort((a, b) => b.year - a.year);
+
+    res.render('civil', { title: 'Civil', civilStudents });
+
+  } catch (error) {
+    res.status(500).send('Something went wrong loading Civil students');
+  }
 });
 
 app.get('/mech', async (req, res) => {
     try {
-        res.render('mech', { title: 'Mech'});
+      const mechStudents = await Register.find({branch:'Mechanical'});
+       mechStudents.sort((a, b) => b.year - a.year);
+      res.render('mech', {title:'Mechanical',mechStudents})
     } catch (error) {
         res.status(500).send(`Something went wrong loading ${title}`);
     }
 });
 
 app.get('/cse', async (req, res) => {
-    try {
-        res.render('cse', { title: 'CSE'});
-    } catch (error) {
-        res.status(500).send(`Something went wrong loading ${title}`);
-    }
+  try {
+    const cseStudents = await Register.find({ branch: 'CSE' });
+     cseStudents.sort((a, b) => b.year - a.year);
+    res.render('cse', { title: 'CSE', cseStudents });
+  } catch (error) {
+    res.status(500).send(`Something went wrong loading CSE students`);
+  }
 });
 
 
