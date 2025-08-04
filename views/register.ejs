@@ -1,0 +1,58 @@
+<%- include('partials/header') %>
+
+<link rel="stylesheet" href="/css/register.css">
+
+<div class="container1">
+  <h1>Register Form</h1>
+  
+  <form action="/register-post" method="POST">
+    <div class="container">
+      <!-- Name Input -->
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required class="name_input">
+      </div>
+      
+      <!-- Branch and Year Row -->
+      <div class="form-row">
+        <div style="flex:1;">
+          <label for="branch">Branch:</label>
+          <select name="branch" id="branch" class="branch-input" required>
+            <option value="" disabled selected>Select Branch</option>
+            <option value="CSE">CSE</option>
+            <option value="Mech">MECH</option>
+            <option value="Civil">CIVIL</option>
+          </select>
+        </div>
+        
+        <div style="flex:1;">
+          <label for="year">Year:</label>
+          <select name="year" id="year" class="form-year" required>
+            <option value="" disabled selected>Select Year</option>
+            <option value="1">1st Year</option>
+            <option value="2">2nd Year</option>
+            <option value="3">3rd Year</option>
+            <option value="4">4th Year</option>
+          </select>
+        </div>
+      </div>
+      
+      <!-- Contact Input -->
+      <div>
+        <label for="phone">Contact:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required class="ph_input">
+      </div>
+      
+      <!-- Address Textarea -->
+      <div class="form-textarea-group">
+        <label for="address">Address:</label>
+        <textarea name="address" id="address" rows="4" required class="form-textarea"></textarea>
+      </div>
+      
+      <!-- Submit Button -->
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+
+<%- include('partials/footer') %>

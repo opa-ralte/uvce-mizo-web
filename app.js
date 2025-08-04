@@ -49,6 +49,14 @@ app.get('/alumni', async (req, res) => {
     }
 });
 
+app.get('/register', async (req, res) => {
+    try {
+        res.render('register', { title: 'Register'});
+    } catch (error) {
+        res.status(500).send(`Something went wrong loading ${title}`);
+    }
+});
+
 app.get('/civil', async (req, res) => {
     try {
         res.render('civil', { title: 'Civil'});
