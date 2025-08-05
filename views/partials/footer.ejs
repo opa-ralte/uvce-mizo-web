@@ -1,9 +1,126 @@
-    <footer>
-        <!--later, replace # with the path to contacts -->
-        <a href="/contacts">contacts</a>
-        <a href="/extras">extras</a>
-        <a href="/danger">[don't press me]</a>
-        <a href="https://www.instagram.com/uvce_mizo/" target="_blank"><img class="insta-footer" src="/images/instagram.png" alt="inst"></a>
-    </footer>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Footer Test</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+ 
+   
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 20px;
+}
+ i {
+      font-size: 25px;
+      color: red;
+    }
+
+
+main {
+  flex: 1;
+}
+
+
+.site-footer {
+  background-color: #222;
+  color: #f0f0f0;
+  padding: 10px 20px 10px;
+margin-bottom: 0px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  max-height: 80px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 300px;
+  margin: -2 20px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  color: #ff9900;
+}
+
+.footer-section p,
+.footer-section ul {
+  margin-top: 1px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+ 
+  margin-top: 50px;
+  margin-bottom: -9px;
+  padding-top: 0px;
+  border-top: 1px solid #444;
+  font-size: 12px;
+  color: #aaa;
+}
+</style>  
+  
+<body>
+
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Inkhawmnaah refreshment kan dawhnawn ngei ngei</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/register">Member</a></li>
+        
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3><ul>
+          <li><a href="/contact">UVCE Mizo Final Year</a></li></ul>
+         <a href="https://www.instagram.com/uvce_mizo/" target="_blank">
+      <i class="fa-brands fa-square-instagram"></i>
+    </a>
+        
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 UVCE MIZO.Vawksa a  tui ber</p>
+    </div>
+  </footer>
+  
+
 </body>
-</html>

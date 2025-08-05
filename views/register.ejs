@@ -5,6 +5,7 @@
   <title><%= title %></title>
 </head>
 <body>
+  <main>
 <%- include('partials/_topbar') %>
 
 
@@ -57,6 +58,8 @@
       </tr>
     <% }); %>
   </tbody>
-</table>
+</table></main>
+<%- include('partials/footer') %>
 </body>
+
 </html>
