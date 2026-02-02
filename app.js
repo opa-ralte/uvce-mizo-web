@@ -2,7 +2,6 @@ const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const path = require('path');
-const bodyParser = require('body-parser');
 const fs = require('fs');
 //👇put the connection to mongodb here
 
@@ -17,9 +16,9 @@ const app = express();
 
 
 app.set('view engine', 'ejs'); // We can embed js directly within our html file
-app.use(express.urlencoded({urlencoded:true}));
+app.use(express.urlencoded({extended:true}));
 app.use(morgan('dev'));
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/image', express.static(path.join(__dirname, 'image')));
 
