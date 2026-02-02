@@ -1,104 +1,57 @@
+require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
-const mongoose = require('mongoose');
 const path = require('path');
-const bodyParser = require('body-parser');
-const fs = require('fs');
-//👇put the connection to mongodb here
-
-//👆
-
-// custom modules👇
-
-// custom modules👆
 
 // This initializes an express application instance
 const app = express();
 
-
 app.set('view engine', 'ejs'); // We can embed js directly within our html file
-app.use(express.urlencoded({urlencoded:true}));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(morgan('dev'));
-app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/image', express.static(path.join(__dirname, 'image')));
 
 
 
-app.get('/home', async (req, res) => {
-    try {
-        res.render('home', { title: 'Home'});
-    } catch (error) {
-        res.status(500).send(`Something went wrong loading ${title}`);
-    }
+// Root route redirect
+app.get('/', (req, res) => {
+  res.redirect('/home');
 });
 
-app.get('/about', async (req, res) => {
-    try {
-        res.render('about', { title: 'About'});
-    } catch (error) {
-        res.status(500).send(`Something went wrong loading ${title}`);
-    } 
+// Route configuration array
+const routes = [
+  { path: '/home', view: 'home', title: 'Home' },
+  { path: '/about', view: 'about', title: 'About' },
+  { path: '/alumni', view: 'alumni', title: 'Alumni' },
+  { path: '/civil', view: 'civil', title: 'Civil' },
+  { path: '/mech', view: 'mech', title: 'Mech' },
+  { path: '/cse', view: 'cse', title: 'CSE' },
+  { path: '/contacts', view: 'contacts', title: 'Contacts' },
+  { path: '/extras', view: 'extras', title: 'Extras' },
+  { path: '/danger', view: 'danger', title: 'Danger' }
+];
+
+routes.forEach(route => {
+  app.get(route.path, (req, res) => {
+    res.render(route.view, { title: route.title });
+  });
 });
 
-app.get('/alumni', async (req, res) => {
-    try {
-        res.render('alumni', { title: 'Alumni'});
-    } catch (error) {
-        res.status(500).send(`Something went wrong loading ${title}`);
-    }
+// 404 handler
+app.use((req, res) => {
+  res.status(404).render('404', { title: '404 - Page Not Found' });
 });
 
-app.get('/civil', async (req, res) => {
-    try {
-        res.render('civil', { title: 'Civil'});
-    } catch (error) {
-        res.status(500).send(`Something went wrong loading ${title}`);
-    }
+// Global error handler
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).render('error', { 
+    title: 'Error', 
+    message: 'Something went wrong!' 
+  });
 });
-
-app.get('/mech', async (req, res) => {
-    try {
-        res.render('mech', { title: 'Mech'});
-    } catch (error) {
-        res.status(500).send(`Something went wrong loading ${title}`);
-    }
-});
-
-app.get('/cse', async (req, res) => {
-    try {
-        res.render('cse', { title: 'CSE'});
-    } catch (error) {
-        res.status(500).send(`Something went wrong loading ${title}`);
-    }
-});
-
-app.get('/contacts', async (req, res) => {
-    try {
-        res.render('contacts', { title: 'Contacts'});
-    } catch (error) {
-        res.status(500).send(`Something went wrong loading ${title}`);
-    }
-});
-
-app.get('/extras', async (req, res) => {
-    try {
-        res.render('extras', { title: 'Extras'});
-    } catch (error) {
-        res.status(500).send(`Something went wrong loading ${title}`);
-    }
-});
-
-app.get('/danger', async (req, res) => {
-    try {
-        res.render('danger', { title: 'Danger'});
-    } catch (error) {
-        res.status(500).send(`Something went wrong loading ${title}`);
-    }
-});
-
-
-
 
 // Start the server 🌐server start karo🌐
 app.listen(process.env.PORT || 3000, () => console.log(`App available on http://localhost:3000/home`));
