@@ -1,98 +1,202 @@
-.wrapper-1 {
+/* Base styles - Mobile First Approach */
+.home {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+}
+
+.hero-section {
+    background-image: url('/images/phone-home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+    z-index: -1;
+    display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
 }
 
-    .main-title {
-        font-family:'Times New Roman', Times, serif;
-        font-weight: 800px;
-        font-size: xx-large;
-        /*background-color: rgb(56, 9, 9);
-        border-radius: 10px;
-        padding: 10px;
-        padding-left: 20px;
-        padding-right: 20px;*/
-<<<<<<< HEAD
-        margin-bottom: 50px;
-=======
-        margin-bottom: 40px;
->>>>>>> 2484dd76737f39ddf3d82a0ac915bf9446fa68f4
-        margin-top: 60px;
-        flex-shrink: 0;
-        color: rgb(58, 4, 4);
-    }
-
-/* 👆anything above this remains same whatsoever 👆 */
-
-
-/* for small smartphones */
-@media (min-width:320px) {
-    .wrapper-2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        gap: 20px;
-    }
-    .photos {
-            margin: 5px;
-            border: 2px solid black;
-            border-radius: 30px;
-            border-left: 20px;
-            padding: 5px;
-            flex-wrap: wrap;
-            max-width: 70%;
-            width: 95%;
-            height: auto;
-            flex-grow: 1;
-        }
-
-        .content {
-            margin: 5px;
-            padding-left: 5px;
-            padding-right: 5px;
-            flex-wrap: wrap;
-            color: rgb(0, 0, 0);
-        }
+.content-below {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(227, 239, 239, 0.95));
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
 }
 
-/* for larger tablets and desktops.  */
-/* @media (min-width:1025px) {
-    .wrapper-2 {
-        display: flex;
+.title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 8vw, 4rem);
+    text-align: center;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #333;
+    max-width: 90%;
+    word-wrap: break-word;
+}
+
+.sub-title {
+    font-style: oblique;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #555;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.zat {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background-color: #dbeeee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zat:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.des {
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    margin-bottom: 0.5rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.num {
+    padding: 0.75rem;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-weight: bold;
+    color: #2c5aa0;
+    text-align: center;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+    .content-below {
+        padding: 3rem 2rem;
+    }
+    
+    .title {
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .sub-title {
+        margin-bottom: 3rem;
+    }
+    
+    .stats {
         flex-direction: row;
-        justify-content: space-around;
-        gap: 20px;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
     }
+    
+    .zat {
+        min-width: 180px;
+        max-width: 220px;
+        padding: 2rem;
+    }
+}
 
-        .photos {
-            margin: 5px;
-            border: 2px solid black;
-            border-radius: 30px;
-            padding: 5px;
-            flex-wrap: wrap;
-            max-width: 50%;
-            width: 100%;
-            height: auto;
-            flex-grow: 1;
-        }
+/* Desktop styles */
+@media (min-width: 1024px) {
+    .hero-section {
+        background-image: url('/images/lan_kim.jpg');
+        transition: opacity 0.6s ease-out;
+    }
+    
+    .content-below {
+        padding: 4rem 3rem;
+    }
+    
+    .title {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    
+    .sub-title {
+        margin-bottom: 4rem;
+    }
+    
+    .stats {
+        gap: 3rem;
+        max-width: 800px;
+    }
+    
+    .zat {
+        min-width: 200px;
+        max-width: 250px;
+        padding: 2.5rem;
+    }
+}
 
-        .content {
-            margin: 5px;
-            padding-left: 5px;
-            padding-right: 5px;
-            flex-wrap: wrap;
-        }
-        .caption {
-            font-weight: 550;
-        }
+/* Large desktop styles */
+@media (min-width: 1200px) {
+    .content-below {
+        padding: 5rem 4rem;
+    }
+    
+    .stats {
+        gap: 4rem;
+        max-width: 1000px;
+    }
+    
+    .zat {
+        min-width: 220px;
+        max-width: 280px;
+        padding: 3rem;
+    }
+}
 
-        p {
-            font-size: large;
-        }
-} */
+/* Extra large screens */
+@media (min-width: 1440px) {
+    .content-below {
+        padding: 6rem 5rem;
+    }
+    
+    .stats {
+        gap: 5rem;
+        max-width: 1200px;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-section {
+        background-image: url('/images/lan_kim.jpg');
+    }
+}
 
 
 
