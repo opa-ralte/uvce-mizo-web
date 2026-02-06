@@ -19,6 +19,7 @@
   "homepage": "https://github.com/opa-ralte/uvce-mizo-web#readme",
   "dependencies": {
     "body-parser": "^2.2.0",
+    "compression": "^1.7.4",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "mongoose": "^8.16.4",
